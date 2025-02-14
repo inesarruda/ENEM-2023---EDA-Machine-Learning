@@ -23,7 +23,7 @@
 - XGBoost Regressor
 
 ## Detalhamentos das Etapas:
-### Pré Processamento
+## Pré Processamento
 
 #### Um dos aspectos mais importantes de um ETL bem feito é **redução de memória RAM e em disco**. Já na primeira etapa de pré processamento, conseguimos uma redução de 82% e 84% respectivamente.
 
@@ -47,7 +47,7 @@
 
 #### O resumo dos resultados das otimizações encontra-se no final do notebook
 
-### EDA - Análise Exploratórioa de Dados
+## EDA - Análise Exploratórioa de Dados
 #### Durante a etapa de EDA queremos responder as analisar vários aspectos, dentre eles:
 - Média geral das notas por tipo de escola (pública e privada)
   
@@ -59,22 +59,30 @@
 
 Esses foram apenas alguns exemplos, mas uma análise muito mais completa está presente no notebook "EDA"
 
-### Machine Learning 
+## Machine Learning 
 
 #### Nessa etapa foram feitas análises individuais dos modelos, e também um pipeline de dados com os pre processamentos necessários, exemplo:
 ![image](https://github.com/user-attachments/assets/ec54d05d-3f29-4eef-b33c-f74d021bfe25)
 
 ![image](https://github.com/user-attachments/assets/7698881c-7ce8-41ed-97c1-21ac08de6ce5)
 
+### Conclusões:
+
+#### Um dos principais aspectos desse projeto foi a limpeza de dados eficiente, como redução de memória RAM de 9,6 GB para 1,71 GB, e redução de 80% do espapaço em disco.
+
+#### Também foi possível fazer uma análise de dados bem completa, mas com margem para explorar ainda mais nas próximas atualizações
+
+#### Na etapa de Machine Learning obtivemos um bom resultado, mas assim como EDA, com margem para explorar ainda mais nas próximas atualizações.
+
 ### Perspectivas:
-#### Durante o processo alguns passos ficaram para uma "Versão 2.0" como 
+#### Durante o processo alguns passos ficaram para uma "Versão 2.0" como:
+- Agrupar os estados em suas regiões e aplicar as análises comparando cada uma delas
 - Fazer testes de hipótese em algumas premissas de nota e situação social
 - Testar novos modelos 
 - Fazer uma otimização de hiperparâmetros utilizando Bayseian Search ou Outros Métodos
-- Fazer Feature Selection com outros métodos, como "Permutaion Importance" 
+- Fazer Feature Selection com outros métodos, como "Permutaion Importance"
+- Verificar a possibilidade de colocar todos os arquivos no repositório com o git lgs
 
-### Conclusões:
+### Observações:
+#### Os arquivos dos microdados do ENEM são muito grande e superam o limite de 100mb, numa próxima atualização vou verificar se funciona colocar todos os arquivos com o git lgs, mas todos os arquivos parquet criados e utilizados no pré processamento vem a partir do arquivo de origem 'MICRODADOS_ENEM_2023.csv' obtido no link "https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/enem". 
 
-#### Como resultado do passo a passo acima, saímos de um uso de memória RAM de 9,6 GB para 1,71 GB. De forma exata, tivemos uma redução de 82% de memória, fator bastante importante para o desempenho das análises. A
-
-#### A transformação do arquivo CSV para um arquivo do tipo Parquet também proporcionou uma 
